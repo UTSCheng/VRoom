@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer 3D Room</title>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+            "three/examples/jsm/controls/OrbitControls.js": "https://unpkg.com/three@0.164.1/examples/jsm/controls/OrbitControls.js",
+            "three/examples/jsm/webxr/XRControllerModelFactory.js": "https://unpkg.com/three@0.164.1/examples/jsm/webxr/XRControllerModelFactory.js",
+            "three/examples/jsm/geometries/BoxLineGeometry.js": "https://unpkg.com/three@0.164.1/examples/jsm/geometries/BoxLineGeometry.js"
+        }
+    }
+    </script>
+    <style>
+        body { margin: 0; background-color: #000; }
+        canvas { display: block; }
+        #loading-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #loading-bar-container {
+            width: 50%;
+            height: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        #loading-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #fff;
+        }
+        #vr-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+        }
+        #vr-button:hover {
+            background-color: #005a9e;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-screen">
+        <div id="loading-bar-container">
+            <div id="loading-bar"></div>
+        </div>
+    </div>
+    <button id="vr-button">Enter VR</button>
+    <script type="module" src="/client.js"></script>
+</body>
+</html>

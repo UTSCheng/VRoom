@@ -1,0 +1,13 @@
+{
+  "name": "project-cube-mr",
+  "version": "0.1.0",
+  "description": "A real-time collaborative 3D environment with a movable cube, supporting desktop and VR/MR.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "three": "^0.164.1",
+    "ws": "^8.17.0"
+  }
+}
