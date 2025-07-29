@@ -59,3 +59,17 @@ This document outlines the development plan for creating a real-time collaborati
         - Teleportation or smooth locomotion for movement.
         - Grabbing and manipulating the cube with the controllers.
     - Ensure the render loop is compatible with the WebXR presentation loop.
+
+## 5. Cube Color Synchronization Fix
+
+- **Objective:** Ensure all clients see identical cube colors for consistent shared experience.
+- **Priority:** High - Critical bug affecting user experience
+- **Implementation:** Follow the detailed spec at `.kiro/specs/cube-color-synchronization/`
+- **Key Tasks:**
+    - Enhance server-side color logging and validation
+    - Improve client-side color application with error handling
+    - Add color synchronization verification system
+    - Implement color resync mechanism for recovery
+    - Add comprehensive debugging and error logging
+    - Create automated tests for color consistency
+- **Note:** This addresses the reported issue where "cubes that spawn in are not the same colour across different clients"
